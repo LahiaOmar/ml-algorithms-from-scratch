@@ -1,4 +1,4 @@
-from decisionTree.Node import Node
+from Node import Node
 import numpy as np
 from collections import Counter
 
@@ -65,7 +65,7 @@ class DecisionTree:
                 freq_right[curent_class] -= 1
                 gini_left = 1.0 - sum( (fr/(j))**2 for fr in freq_left )
                 gini_right = 1.0 - sum((fr / (nb_current_simples - j)) ** 2 for fr in freq_right)
-                gini_result =  ( (j)*gini_left + (nb_current_simples - j)*gini_right ) / nb_current_simples
+                gini_result = ( (j)*gini_left + (nb_current_simples - j)*gini_right ) / nb_current_simples
                 if sorted_threshold[j] == sorted_threshold[j-1] :
                     continue
                 if gini_result < best_gini :

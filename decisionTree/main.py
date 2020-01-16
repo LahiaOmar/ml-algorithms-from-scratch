@@ -1,4 +1,4 @@
-from decisionTree.DecisionTree import DecisionTree
+from DecisionTree import DecisionTree
 from sklearn.model_selection import train_test_split
 from collections import Counter
 from sklearn.datasets import load_iris
